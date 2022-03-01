@@ -7,8 +7,7 @@ var scrollContentBy = function (distance)
 		document.getElementById("content").scrollBy(distance,00;
 	}
 var getImage = function (image) {
-	window.location = "viewimage:"+image.src;
-	console.log("viewimage:"+image.src);
+	Android.showImage(image.src);
 };
 var getText = function (element){
 	window.location ="textelement:"+element.innerHTML;
