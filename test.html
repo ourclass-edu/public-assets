@@ -15,10 +15,20 @@ var getImageUrl = function (image) {
 	window.location = "viewimage:"+image.src;
 	console.log("viewextimage:"+image.src);
 };
+	    document.addEventListener("DOMContentLoaded",(event)=>{
+        document.getElementsByTagName("body")[0].addEventListener("copy",(e)=>{
+            e.clipboardData.setData('text/plain', 'www.ourclass.in');
+            e.preventDefault(); return false; 
+        })
+        document.getElementsByTagName("body")[0].addEventListener("cut",(e)=>{
+            e.clipboardData.setData('text/plain', 'www.ourclass.in');
+            e.preventDefault(); return false; 
+        })
+    })
 </script>
 <style>
 html{
-background-color = transparent;
+background-color: transparent;
 }
 table, th, td {
   border: 1px solid black;
@@ -30,7 +40,7 @@ th, td {
 td{
 vertical-align: text-top;
 }
-.thunderbolt li: {
+.thunderbolt li {
    position: relative;
    overflow: hidden;
 }
@@ -48,6 +58,7 @@ column-count: auto;
 		height: 999;
 		overflow-x: scroll;
 		overflow-y: hidden;
+		box-sizing: border-box;
 	}
 </style>
 </head>
